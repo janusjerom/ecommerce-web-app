@@ -15,6 +15,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
+import ProductDetails from './Screens/ProductDetails';
+
 
 const drawerWidth = 240;
 
@@ -166,42 +168,20 @@ export default function MenuDrawer() {
 					<Tab label="Vegetables" {...a11yProps(2)} />
 					<Tab label="Settings" {...a11yProps(3)} />
 				</Tabs>
-
-				{/* <List>
-          {['Trending', 'New Releases', 'Movers and Shakers', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List> */}
 			</Drawer>
 			<Main open={open}>
 				<DrawerHeader />
 				<TabPanel value={value} index={0}>
-					ProductDetails
+					<ProductDetails/>
 				</TabPanel>
 				<TabPanel value={value} index={1}>
-					ProductDetails
+					<ProductDetails/>
 				</TabPanel>
 				<TabPanel value={value} index={2}>
-					ProductDetails
+					<ProductDetails/>
 				</TabPanel>
 				<TabPanel value={value} index={3}>
-					ProductDetails
+					<ProductDetails/>
 				</TabPanel>
 			</Main>
 		</Box>

@@ -1,0 +1,38 @@
+[ 
+    { 
+    "name":"Potato", 
+    "id":1, 
+    "price":30, 
+    "available":1, 
+    "vendor":"Himachal Pvt Ltd", 
+    "img": "Assets/Potatoes.jpg",
+    "category":"Vegtables" 
+    }, 
+    { 
+    "name":"Banana", 
+    "id":2, 
+    "price":50, 
+    "available":1, 
+    "category":"Fruits",
+    "vendor": "Organic farms",
+    "img": "Assets/Banana.jpg"
+    }, 
+    { 
+    "name":"Drumsticks", 
+    "id":3, 
+    "price":20, 
+    "available":0, 
+    "category":"Vegetables", 
+    "img": "Assets/Drumsticks.jpg",
+    "vendor":"Mallikarjuna farms"
+    }, 
+    { 
+    "name":"Orange", 
+    "id":4, 
+    "price":25, 
+    "available":1, 
+    "vendor":"Nagpur farms", 
+    "img": "Assets/Orange.jpg",
+    "category":"Fruits" 
+    } 
+]
