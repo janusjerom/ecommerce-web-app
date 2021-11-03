@@ -97,7 +97,7 @@ export default function ProductScreen(props) {
 
         <Grid item sm={4} xs={12}>
           <Typography variant="h2">{product.name}</Typography>
-          <Typography variant="h3">{product.price}</Typography>
+          <Typography variant="h3">&#8377;{product.price}</Typography>
           <Typography>Seller Information : {product.vendor}</Typography>
           <Typography>Category : {product.category}</Typography>
         </Grid>
