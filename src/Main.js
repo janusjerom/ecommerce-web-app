@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { styled, useTheme } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -15,10 +16,18 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
-import ProductDetails from './Screens/ProductDetails';
-
+import ProductList from './Screens/ProductDetails';
 
 const drawerWidth = 240;
+
+const useStyles = makeStyles({
+  tabPanel: {
+    width: '100%',
+    "& .MuiBox-root": {
+      padding: "0px",
+    }
+  },
+});
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
 	({ theme, open }) => ({
@@ -101,6 +110,8 @@ export default function MenuDrawer() {
 	const theme = useTheme();
 	const [open, setOpen] = React.useState(false);
 
+  const classes = useStyles();
+
 	const handleDrawerOpen = () => {
 		setOpen(true);
 	};
@@ -116,6 +127,7 @@ export default function MenuDrawer() {
 	};
 
 	return (
+    
 		<Box sx={{ display: 'flex' }}>
 			<CssBaseline />
 			<AppBar position="fixed" open={open}>
@@ -171,17 +183,17 @@ export default function MenuDrawer() {
 			</Drawer>
 			<Main open={open}>
 				<DrawerHeader />
-				<TabPanel value={value} index={0}>
-					<ProductDetails/>
+				<TabPanel className={classes.tabPanel} value={value} index={0}>
+					<ProductList/>
 				</TabPanel>
-				<TabPanel value={value} index={1}>
-					<ProductDetails/>
+				<TabPanel className={classes.tabPanel} value={value} index={1}>
+					<ProductList/>
 				</TabPanel>
-				<TabPanel value={value} index={2}>
-					<ProductDetails/>
+				<TabPanel className={classes.tabPanel} value={value} index={2}>
+					<ProductList/>
 				</TabPanel>
-				<TabPanel value={value} index={3}>
-					<ProductDetails/>
+				<TabPanel className={classes.tabPanel} value={value} index={3}>
+					<ProductList/>
 				</TabPanel>
 			</Main>
 		</Box>
