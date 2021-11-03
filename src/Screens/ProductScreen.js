@@ -66,9 +66,11 @@ export default function ProductScreen(props) {
   const handleClickOpen = () => {
     setOpen(true);
   };
+
   const handleClose = () => {
-    setOpen(false);
-  };
+    
+    setOpen(false)
+  }
 
 
 
@@ -141,9 +143,6 @@ export default function ProductScreen(props) {
             <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
               {product.name}
             </Typography>
-            <Button autoFocus color="inherit" onClick={handleClose}>
-              save
-            </Button>
           </Toolbar>
         </AppBar>
         <List>
