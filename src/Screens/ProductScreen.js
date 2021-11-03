@@ -161,6 +161,7 @@ export default function ProductScreen(props) {
           <Typography >
           Seller: {product.vendor}
           </Typography>
+          <Divider />
           </div>
         </List>
         <DialogActions>
